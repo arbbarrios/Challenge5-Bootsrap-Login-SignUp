@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup Bootstrap</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Questrial&display=swap');</style>
+</head>
+<body>
+    <div class="front">
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="navbar-brand">
+                <h1>myWebsite</h1>
+            </div>
+        
+            <div class="btn-sign">
+                <button class="btn btn-primary" onclick="document.getElementById('login-form')
+                .style.display='block'" style="width:auto;"
+                type="button">Sign In</button>
+              </div> 
+        </nav>
+
+        <div id="login-form" class="login-page">
+            <div class="form-box">
+                <form id="login" class="input-group-login">
+
+                    <h3 class="text-center">WELCOME</h3>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+
+                    <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                    </div>
+
+                    <div class="col-md-12 text-center">
+                        <button type="button" class="btn btn-primary">Log in</button>
+                    </div>
+        
+
+                    <div class="col-md-12 text-center">
+                        <button type="button" onclick="register()" class="toggle-btn">Create an account</button>
+                    </div>
+                    
+                        
+                    </form>
+        
+                    <form id="register" class="input-group-register">
+
+                        <h3 class="text-center">BE ONE OF US</h3>
+
+                        <div class="mb-3">
+                            <label for="exampleInputName" class="form-label">Full Name</label>
+                            <input type="email" class="form-control" id="exampleInputName" aria-describedby="emailHelp">
+                            <label for="exampleInputEmail2" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            
+                        <div class="mb-3">
+                            <label for="exampleInputPassword2" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                            
+                        <div class="mb-3">
+                            <label for="exampleInputPassword3" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword4">
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">I agree to the terms and condition.</label>
+                        </div>
+
+                        <div class="col-md-12 text-center">
+                            <button type="button" class="btn btn-primary">Register</button>
+                        </div>
+
+                        <div class="col-md-12 text-center">
+                            <button type="button" onclick="login()" class="toggle-btn">Already have an account</button>
+                        </div>
+                              
+                    </form>
+                </div>
+            </div>
+
+            
+            <script>
+                var x=document.getElementById('login');
+                var y=document.getElementById('register');
+                var z=document.getElementById('btn');
+                function register()
+                {
+                    x.style.left='-400px';
+                    y.style.left='50px';
+                    z.style.left='110px';
+                }
+        
+                function login()
+                {
+                    x.style.left='50px';
+                    y.style.left='450px';
+                    z.style.left='0px';
+                }
+            </script>
+        
+            <script>
+                var modal=document.getElementById('login-form');
+                window.onclick=function(event){
+                    if (event.target==modal){
+                        modal.style.display="none";
+                    }
+                }
+            </script>
+        </div>
+    
+    
+    </div>
+</body>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</html>
